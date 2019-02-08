@@ -16,7 +16,7 @@ public class RabbitController {
     public String send(@RequestParam("msg") String msg) {
         for (int i = 0; i < 10; i++) {
             System.out.println(i + " : " + msg);
-            publisher.produce(msg);
+            publisher.publish(msg);
         }
 
         return "Success!";

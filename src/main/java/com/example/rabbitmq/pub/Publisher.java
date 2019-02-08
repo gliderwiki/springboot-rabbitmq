@@ -19,7 +19,7 @@ public class Publisher {
     private String routingKey;
 
 
-    public void produce(String message) {
+    public void publish(String message) {
         amqpTemplate.convertAndSend(exchange, routingKey, message);
         System.out.println("Send message = " + message);
     }
