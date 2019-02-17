@@ -9,5 +9,6 @@ public class Subscriber {
     @RabbitListener(queues = "${custom.rabbitmq.queue}")
     public void subscribe(String message) {
         System.out.println("Received Message = " + message);
+
     }
 }
